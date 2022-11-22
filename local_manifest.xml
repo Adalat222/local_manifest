@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+ <!-- Trees -->
+ <project path="device/xiaomi/gauguin" name="Adalat222/android_device_xiaomi_gauguin.git" remote="github" revision="tiramisu" />
+ <project path="vendor/xiaomi/gauguin" name="Molyuu/vendor_xiaomi_gauguin.git" remote="github" revision="master" />
+ <project path="kernel/xiaomi/gauguin" name="PixelOS-Devices/kernel_xiaomi_gauguin.git" remote="github" revision="thirteen" />
+ 
+</manifest>
