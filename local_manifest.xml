@@ -8,3 +8,4 @@
  <project path="prebuilts/clang/host/linux-x86/clang-atomx" name="ElectroPerf/atom-x-clang.git" remote="github" revision="master" />
  
 </manifest>
+a
