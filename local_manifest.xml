@@ -2,6 +2,6 @@
 <manifest>
 
  <!-- Trees -->
- <project path="device/xiaomi/gauguin" name="DevAdalat/android_device_xiaomi_gauguin" remote="github" revision="tiramisu" />
+ <project path="device/xiaomi/gauguin" name="DevAdalat/android_device_xiaomi_gauguin" remote="github" revision="evo-x" />
 
 </manifest>
