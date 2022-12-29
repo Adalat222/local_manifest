@@ -2,10 +2,8 @@
 <manifest>
 
  <!-- Trees -->
- <project path="device/xiaomi/gauguin" name="Adalat222/android_device_xiaomi_gauguin.git" remote="github" revision="tiramisu" />
- <project path="vendor/xiaomi/gauguin" name="Molyuu/vendor_xiaomi_gauguin.git" remote="github" revision="master" />
- <project path="kernel/xiaomi/gauguin" name="PixelOS-Devices/kernel_xiaomi_gauguin.git" remote="github" revision="thirteen" />
- <project path="prebuilts/clang/host/linux-x86/clang-atomx" name="ElectroPerf/atom-x-clang.git" remote="github" revision="master" />
+ <project path="device/xiaomi/gauguin" name="Molyuu/android_device_xiaomi_gauguin" remote="github" revision="Tango" />
+ <project path="vendor/xiaomi/gauguin" name="Molyuu/vendor_xiaomi_gauguin" remote="github" revision="master" />
+ <project path="kernel/xiaomi/gauguin" name="Molyuu/neko_kernel_xiaomi_gauguin" remote="github" revision="master" />
  
 </manifest>
-a
