@@ -7,10 +7,10 @@ jobs:
       - checkout
       - run:
           name: "Init repo"
-          command: echo y | ./repo init --depth=1 -u https://github.com/Evolution-X/manifest -b tiramisu
+          command: echo y | repo init --depth=1 -u https://github.com/Evolution-X/manifest -b tiramisu
       - run:
           name: "Sync Repo"
-          command: ./repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
+          command: repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
       - run:
           name: "Sync Device tree"
           command: git clone --depth=1 https://github.com/DevAdalat/android_device_xiaomi_gauguin device/xiaomi/gauguin
