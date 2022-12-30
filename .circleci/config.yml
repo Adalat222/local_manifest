@@ -15,9 +15,6 @@ jobs:
           name: "Sync Device tree"
           command: git clone --depth=1 https://github.com/DevAdalat/android_device_xiaomi_gauguin device/xiaomi/gauguin
       - run:
-          name: "Setup Vendor"
-          command: bash device/xiaomi/gauguin/vendorsetup.sh
-      - run:
           name: "Setup env"
           command: source build/envsetup.sh
       - run:
