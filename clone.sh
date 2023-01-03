@@ -4,4 +4,4 @@ git clone --depth=1 https://github.com/LineageOS/android_device_xiaomi_gauguin d
 export USE_CCACHE=1
 ccache -M 20G
 ccache -o compression=true
-. build/envsetup.sh && lunch evolution_gauguin-userdebug && mka evolution
+. build/envsetup.sh && breakfast gauguin && croot && brunch gauguin
