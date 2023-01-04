@@ -2,12 +2,9 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: apon77/aosp:cirrus
+      - image: anggit86/ubuntu:22.04
     steps:
       - checkout
-      - run:
-          name: "Sync"
-          command: ./clone.sh
       - run:
           name: "Build"
           command: ./build.sh
