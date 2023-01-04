@@ -9,5 +9,5 @@ task:
       image: apon77/aosp:latest
       cpu: 8  
       memory: 32G 
-    run_buil_script: 
+    run_Build_script: 
       - ./build.sh
