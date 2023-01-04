@@ -10,4 +10,4 @@ task:
       cpu: 8  #8 or less cpu for dummy build, 8 cpu for the final build, 8cpu highest for free accounts. Don't try to use more than 8cpu as free user, you may get blocked by ci.
       memory: 32G # So that we can have ram when needed, 32G highest
     echo_hello:
-      echo Hello World
+      -  echo Hello World
