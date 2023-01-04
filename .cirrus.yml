@@ -9,17 +9,34 @@ task:
       image: anggit86/ubuntu:22.04
       cpu: 8  
       memory: 32G 
-    Setup_script: 
-      - echo "cmVwbyBpbml0IC0tZGVwdGg9MSAtLW5vLXJlcG8tdmVyaWZ5IC11IGh0dHBzOi8vZ2l0aHViLmNvbS9Fdm9sdXRpb24tWC9tYW5pZmVzdCAtYiB0aXJhbWlzdSAtZyBkZWZhdWx0LC1taXBzLC1kYXJ3aW4sLW5vdGRlZmF1bHQK" | base64 -d | bash
-    Start_setup_script:
-      - echo "cmVwbyBzeW5jIC1jIC1qOCAtLWZvcmNlLXN5bmMgLS1uby1jbG9uZS1idW5kbGUgLS1uby10YWdzCg==" | base64 -d | bash
-    Setup_test_script:
-      - echo "Z2l0IGNsb25lIC0tZGVwdGg9MSBodHRwczovL2dpdGh1Yi5jb20vaWl0enJvaGFuL2RldmljZV94                                                                aWFvbWlfZ2F1Z3VpbiBkZXZpY2UveGlhb21pL2dhdWd1aW4K" | base64 -d | bash
-    Start_test_script:
-      - echo "LiBidWlsZC9lbnZzZXR1cC5zaAo=" | base64 -d | bash
-    Check_script:
-      - echo "ZXhwb3J0IFRaPUFzaWEvS29sa2F0YQo=" | base64 -d | bash
-    Setup_Build_script:
-      - echo "bHVuY2ggZXZvbHV0aW9uX2dhdWd1aW4tdXNlcmRlYnVnCg==" | base64 -d | bash
-    Build_script:
-      - echo "bWthIGV2b2x1dGlvbgo=" | base64 -d | bash
+    test_script:
+      - count=1; iterations=180; while [ $iterations -gt 0 ]; do echo "Hello user $count"; count=$((count+1)); sleep 1; iterations=$((iterations-1)); done
+#   init_script:
+#     - repo init --depth=1 --no-repo-verify -u https://github.com/Evolution-X/manifest -b tiramisu -g default,-mips,-darwin,-notdefault
+#   sync_script:
+#     - repo sync -c -j8 --force-sync --no-clone-bundle --no-tags
+#   tree_script:
+#     - git clone --depth=1 https://github.com/iitzrohan/device_xiaomi_gauguin device/xiaomi/gauguin
+#   env_script:
+#     - . build/envsetup.sh
+#   time_script:
+#     - export TZ=Asia/Kolkata
+#   lunch_script:
+#     - lunch evolution_gauguin-userdebug
+#   build_script:
+#     - mka evolution
+
+#   Setup_script: 
+#     - echo "cmVwbyBpbml0IC0tZGVwdGg9MSAtLW5vLXJlcG8tdmVyaWZ5IC11IGh0dHBzOi8vZ2l0aHViLmNvbS9Fdm9sdXRpb24tWC9tYW5pZmVzdCAtYiB0aXJhbWlzdSAtZyBkZWZhdWx0LC1taXBzLC1kYXJ3aW4sLW5vdGRlZmF1bHQK" | base64 -d | bash
+#   Start_setup_script:
+#     - echo "cmVwbyBzeW5jIC1jIC1qOCAtLWZvcmNlLXN5bmMgLS1uby1jbG9uZS1idW5kbGUgLS1uby10YWdzCg==" | base64 -d | bash
+#   Setup_test_script:
+#     - echo "Z2l0IGNsb25lIC0tZGVwdGg9MSBodHRwczovL2dpdGh1Yi5jb20vaWl0enJvaGFuL2RldmljZV94                                                                aWFvbWlfZ2F1Z3VpbiBkZXZpY2UveGlhb21pL2dhdWd1aW4K" | base64 -d | bash
+#   Start_test_script:
+#     - echo "LiBidWlsZC9lbnZzZXR1cC5zaAo=" | base64 -d | bash
+#   Check_script:
+#     - echo "ZXhwb3J0IFRaPUFzaWEvS29sa2F0YQo=" | base64 -d | bash
+#   Setup_Build_script:
+#     - echo "bHVuY2ggZXZvbHV0aW9uX2dhdWd1aW4tdXNlcmRlYnVnCg==" | base64 -d | bash
+#   Build_script:
+#     - echo "bWthIGV2b2x1dGlvbgo=" | base64 -d | bash
