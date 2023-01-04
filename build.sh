@@ -6,4 +6,4 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 
 export TZ=Asia/Kolkata
 lunch aosp_sweet-userdebug
-mka bacon -jX
+mka evolution
