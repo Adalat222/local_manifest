@@ -4,7 +4,7 @@ env: # Environment variables to pass to all tasks
 
 task:
     name: Build Dummy Script
-    timeout_in: 120m 
+    timeout_in: 160m 
     container:
       image: anggit86/ubuntu:22.04
       cpu: 8  
