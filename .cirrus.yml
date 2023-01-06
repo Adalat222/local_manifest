@@ -1,6 +1,6 @@
 env: # Environment variables to pass to all tasks
     CIRRUS_CLONE_DEPTH: 1 # No need to clone with the whole history
-    CIRRUS_WORKING_DIR: "/tmp/ci" # Where to clone the aosp-builder repo
+    CIRRUS_WORKING_DIR: "/tmp" # Where to clone the aosp-builder repo
 
 task:
     name: Build Dummy Script
@@ -9,8 +9,10 @@ task:
       image: anggit86/ubuntu:22.04
       cpu: 8  
       memory: 32G 
-    test_script:
-      - ./run.sh
+    download_script:
+      - ./clone.sh
+    build_script:
+      - ./build.sh
 #   init_script:
 #     - repo init --depth=1 --no-repo-verify -u https://github.com/Evolution-X/manifest -b tiramisu -g default,-mips,-darwin,-notdefault
 #   sync_script:
