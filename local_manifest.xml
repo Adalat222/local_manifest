@@ -2,8 +2,9 @@
 <manifest>
 
  <!-- Trees -->
-	<project path="device/xiaomi/gauguin" name="LineageOS/android_device_xiaomi_gauguin" remote="github" revision="lineage-20" />
-	<project path="kernel/xiaomi/gauguin" name="LineageOS/android_kernel_xiaomi_gauguin" remote="github" revision="lineage-20" />
-  <project path="vendor/xiaomi/gauguin" name="Molyuu/vendor_xiaomi_gauguin" remote="github" revision="master" />
+  <project path="device/xiaomi/gauguin" name="Adalat222/android_device_xiaomi_gauguin" remote="github" revision="tiramisu" />
+	<project path="kernel/xiaomi/gauguin" name="LineageOS/android_kernel_xiaomi_gauguin.git" remote="github" revision="lineage-20" />
+  <project path="vendor/xiaomi/gauguin" name="iitzrohan/vendor_xiaomi_gauguin" remote="github" revision="master" />
+  <project path="prebuilts/clang/host/linux-x86/clang-proton" name="kdrag0n/proton-clang.git" revision="master"/>
 
 </manifest>
