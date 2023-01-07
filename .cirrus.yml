@@ -16,11 +16,7 @@ task:
     Download_script:
        - repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
     Setup_script:
-       - . build/envsetup.sh
-    Test_script:
-       - lunch evolution_gauguin-userdebug
-    Build_script:
-       - mka evolution
+       - . build/envsetup.sh && lunch evolution_gauguin-userdebug && mka evolution
     Upload_Setup_script:
        - wget https://github.com/Mikubill/transfer/releases/download/v0.4.17/transfer_0.4.17_linux_amd64.tar.gz && tar -xf transfer_0.4.17_linux_amd64.tar.gz
     Upload_script:
