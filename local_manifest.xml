@@ -3,7 +3,7 @@
  <!-- Trees -->
   <project path="device/xiaomi/gauguin" name="Adalat222/android_device_xiaomi_gauguin" remote="github" revision="tiramisu" clone-depth="1" />
 	<project path="kernel/xiaomi/gauguin" name="LineageOS/android_kernel_xiaomi_gauguin.git" remote="github" revision="lineage-20" clone-depth="1" />
-  <project path="vendor/xiaomi/gauguin" name="iitzrohan/vendor_xiaomi_gauguin" remote="github" revision="master" clone-depth="1" />
+  <project path="vendor/xiaomi/gauguin" name="iitzrohan/vendor_xiaomi_gauguin" remote="github" revision="tiramisu" clone-depth="1" />
   <project path="prebuilts/clang/host/linux-x86/clang-proton" name="kdrag0n/proton-clang.git" remote="github" revision="master" clone-depth="1" />
 
 </manifest>
