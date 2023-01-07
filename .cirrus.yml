@@ -1,0 +1,27 @@
+env: # Environment variables to pass to all tasks
+    CIRRUS_CLONE_DEPTH: 1 # No need to clone with the whole history
+    CIRRUS_WORKING_DIR: "/tmp/ci" # Where to clone the aosp-builder repo
+
+task:
+    name: Build Dummy Script
+    timeout_in: 180m 
+    container:
+      image: anggit86/ubuntu:22.04
+      cpu: 8  
+      memory: 32G 
+    Init_script:
+       - repo init --depth=1 --no-repo-verify -u repo init -u https://github.com/Evolution-X/manifest.git -b tiramisu -g default,-mips,-darwin,-notdefault
+    Sync_script:
+       - git clone https://github.com/Adalat222/local_manifest.git --depth=1 .repo/local_manifests
+    Download_script:
+       - repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
+    Setup_script:
+       - . build/envsetup.sh
+    Test_script:
+       - lunch evolution_gauguin-userdebug
+    Build_script:
+       - mka evolution
+    Upload_Setup_script:
+       - wget https://github.com/Mikubill/transfer/releases/download/v0.4.17/transfer_0.4.17_linux_amd64.tar.gz && tar -xf transfer_0.4.17_linux_amd64.tar.gz
+    Upload_script:
+       - ./transfer gof out/target/product/gauguin/evolution_gauguin*.zip
