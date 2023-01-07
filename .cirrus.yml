@@ -10,7 +10,7 @@ task:
       cpu: 8  
       memory: 32G 
     Init_script:
-       - repo init --depth=1 --no-repo-verify -u repo init -u https://github.com/Evolution-X/manifest.git -b tiramisu -g default,-mips,-darwin,-notdefault
+       - repo init -u https://github.com/Evolution-X/manifest.git -b tiramisu -g default,-mips,-darwin,-notdefault
     Sync_script:
        - git clone https://github.com/Adalat222/local_manifest.git --depth=1 .repo/local_manifests
     Download_script:
